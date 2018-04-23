@@ -2,18 +2,19 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		
 		<title>Это заголовок тайтл</title>
-		<script>
-			var button = document.getElementById('button');
-               button.addEventListener('click', func);
-
-			function func() {
-				var heightWindow = window.innerHeight;
-				window.scrollBy(0, heightWindow)
-}
-		</script>
 	</head>
-	<body>
-		<button id="button">Нажми меня!</button>
-	</body>
+	<body style="height: 400px;">
+	<div id="show">X:226 Y:158</div>
+
+<script>
+	window.addEventListener('mousemove', go);
+	function go(event) {
+		document.getElementById('show').innerHTML = 'X:'+event.clientX+' Y:'+event.clientY;
+	}	
+</script>
+</body>
+
+
 </html>
